@@ -1,0 +1,8 @@
+reserve_movies.testPage:
+  path: '/movie-reservation'
+  defaults:
+    _controller: '\Drupal\reserve_movies\Controller\MovieReservationController::testPage'
+    _title: 'Welcome to our test page'
+  requirements:
+    _permission: 'access content'
+ 

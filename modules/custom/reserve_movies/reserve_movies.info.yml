@@ -1,0 +1,5 @@
+name: reserve movies
+description: This module initially shows basic info on movies, later on it will be used for reservations for our Cinema
+type: module
+core_version_requirement: ^9
+package: Custom
