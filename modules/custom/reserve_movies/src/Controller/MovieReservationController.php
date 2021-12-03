@@ -1,10 +1,10 @@
 <?php
-namespace Drupal\custom\reserve_movies\src\Controller;
+namespace Drupal\reserve_movies\Controller;
 
-use Drupal\Core\Controller\ControllerBase;
+// use Drupal\Core\Controller\ControllerBase;
 
-class MovieReservationController {
-    public function testPage () {
+class MovieReservationController{
+    public function testPage() {
         $items = array(
             array('title' => 'sample movie 1'),
             array('title' => 'sample movie 2'),
@@ -15,10 +15,10 @@ class MovieReservationController {
             array('title' => 'sample movie 7'),
         );
         return array(
-            '#theme' => 'movie_list',
-            '#items' => $items,
-            '#title' => 'List of movies'
-        );
+             '#theme' => 'movie-list',
+             '#items' => $items,
+             '#title' => 'List of movies'
+         );
 
     }
 }
