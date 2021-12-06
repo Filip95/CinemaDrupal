@@ -1,9 +1,7 @@
 <?php
 namespace Drupal\reserve_movies\Controller;
 
-// use Drupal\Core\Controller\ControllerBase;
-
-class MovieReservationController{
+class MovieReservationController {
     public function testPage() {
         $items = array(
             array('title' => 'sample movie 1'),
