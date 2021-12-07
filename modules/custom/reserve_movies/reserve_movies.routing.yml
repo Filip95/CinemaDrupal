@@ -1,7 +1,7 @@
-movie-reservation.testPage:
+movie-reservation.showMovies:
   path: /movie-reservation
   defaults:
-    _controller: Drupal\reserve_movies\Controller\MovieReservationController::testPage
+    _controller: Drupal\reserve_movies\Controller\MovieReservationController::showMovies
     _title: 'Welcome to our test page'
   requirements:
     _permission: 'access content'

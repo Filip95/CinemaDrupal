@@ -1,22 +1,19 @@
 <?php
 namespace Drupal\reserve_movies\Controller;
+use \Drupal\node\Entity\Node;
 
 class MovieReservationController {
-    public function testPage() {
-        $items = array(
-            array('title' => 'sample movie 1'),
-            array('title' => 'sample movie 2'),
-            array('title' => 'sample movie 3'),
-            array('title' => 'sample movie 4'),
-            array('title' => 'sample movie 5'),
-            array('title' => 'sample movie 6'),
-            array('title' => 'sample movie 7'),
-        );
+    public function showMovies() {
+       $query = \Drupal::entityQuery('node')
+          ->condition('type', 'movie')
+          ->sort('created','DESC')
+          ->execute();
+        $movies = Node::loadMultiple($query);
+
         return array(
              '#theme' => 'movie-list',
-             '#items' => $items,
+             '#movies' => $movies,
              '#title' => 'List of movies'
          );
-
     }
 }
