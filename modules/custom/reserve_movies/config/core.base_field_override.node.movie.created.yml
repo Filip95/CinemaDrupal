@@ -1,0 +1,18 @@
+uuid: f58833e1-dfa3-42d1-825f-417f0a349f02
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.movie
+id: node.movie.created
+field_name: created
+entity_type: node
+bundle: movie
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

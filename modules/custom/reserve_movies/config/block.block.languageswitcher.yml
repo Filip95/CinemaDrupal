@@ -1,0 +1,20 @@
+uuid: 25a950ea-d2be-4a16-a806-07cccaa61fb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - tara
+id: languageswitcher
+theme: tara
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: visible
+visibility: {  }

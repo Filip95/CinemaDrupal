@@ -1,0 +1,8 @@
+uuid: ab737a6b-d5e6-4219-af30-f6276199afa0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Movie type'
+vid: movie_type
+description: 'Use genres to group movies into categories'
+weight: 0
