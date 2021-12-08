@@ -1,0 +1,21 @@
+uuid: 79f2923e-74e5-47d5-990d-8943ffd82aa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title
+    - node.type.movie
+  module:
+    - text
+id: node.movie.field_title
+field_name: field_title
+entity_type: node
+bundle: movie
+label: Title
+description: 'Title of a movie that you want to add '
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

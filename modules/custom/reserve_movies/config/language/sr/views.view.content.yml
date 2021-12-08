@@ -1,0 +1,42 @@
+label: Садржај
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Филтрирај
+          exposed_sorts_label: 'Сортирај по'
+      fields:
+        title:
+          label: Наслов
+        name:
+          label: Аутор
+        status:
+          label: Статус
+          settings:
+            format_custom_false: Необјабљено
+        operations:
+          label: Операције
+      filters:
+        title:
+          expose:
+            label: Наслов
+        status:
+          expose:
+            label: Статус
+          group_info:
+            group_items:
+              2:
+                title: Необјабљено
+        langcode:
+          expose:
+            label: Језик
+      title: Садржај
+    display_title: Подразумевано
+  page_1:
+    display_options:
+      menu:
+        title: Садржај
+      tab_options:
+        title: Садржај
+        description: 'Нађи и управљај садржајем'
