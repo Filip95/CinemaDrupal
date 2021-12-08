@@ -1,9 +1,13 @@
-<h4>{{title}}</h4>
+<h1>{{'Welcome to movie reservation page'}}</h1>
 
 <ol>
-    {% for movie in items %}
-        <li>
-            {{movie.title}}
+    {% for movie in movies %}
+    <div>
+        <li> 
+            <h3>{{movie.title.value}}</h3>
+            <h6>{{movie.field_description.value}}</h6>
+            <img src="{{ file_url(movie.field_poster_image.entity.uri.value) }}" width="400px" height="400px"><br>
         </li>
+    </div>    
     {% endfor %}
 </ol>
