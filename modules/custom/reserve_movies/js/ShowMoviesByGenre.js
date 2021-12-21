@@ -10,7 +10,7 @@ function ShowMoviesByGenre() {
             method: "GET",
             url: "./movie-reservation?genre=" + $("#genre").val(),
             success: function () {
-                window.location.assign("./movie-reservation?genre=" + $("#genre").val());
+                window.location.href = "./movie-reservation?genre=" + $("#genre").val();
             }
         });
     });
