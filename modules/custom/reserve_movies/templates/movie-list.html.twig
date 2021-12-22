@@ -1,13 +1,30 @@
-<h1>{{'Welcome to movie reservation page'}}</h1>
-
-<ol>
-    {% for movie in movies %}
-    <div>
-        <li> 
-            <h3>{{movie.title.value}}</h3>
-            <h6>{{movie.field_description.value}}</h6>
-            <img src="{{ file_url(movie.field_poster_image.entity.uri.value) }}" width="400px" height="400px"><br>
-        </li>
-    </div>    
-    {% endfor %}
-</ol>
+{{attach_library('reserve_movies/reserve_movies')}}
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <h1>{{'Welcome to movie reservation page'}}</h1>
+    <h3>{{'Please select movie genre for which you would like to make a reservation:'}}</h3>
+    <select name="genre" id="genre">
+        <option value="">Select a genre</option>
+        <option value="0">All Movies</option>
+        {% for genre in genres %}
+        <option value={{genre.tid.value}}>{{genre.name.value}}</option>
+        {% endfor %}
+    </select>
+    <ol> 
+    {% if movies is not empty %}
+        {% for movie in movies %}
+        <div>
+            <li> 
+                <h3>{{movie.title.value}}</h3>
+                <h6>{{movie.field_description.value}}</h6>
+                <img src="{{ file_url(movie.field_poster_image.entity.uri.value) }}" width="400px" height="400px"><br>
+            </li>
+        </div>    
+        {% endfor %}
+    {% else %}
+            <h3>There are currently no movies in the selected genre, check back soon or select a different genre</h3>
+    {% endif %}
+    </ol>
+</body>

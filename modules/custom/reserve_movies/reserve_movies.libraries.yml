@@ -1,0 +1,9 @@
+reserve_movies:
+  version: 1.0
+  css:
+    theme:
+      css/ReserveMovies.css: {}
+  js:
+      js/ShowMoviesByGenre.js: {}
+  dependencies:
+    - core/jquery

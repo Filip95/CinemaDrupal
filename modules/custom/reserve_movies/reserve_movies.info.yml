@@ -3,3 +3,6 @@ description: This module initially shows basic info on movies, later on it will 
 type: module
 core_version_requirement: ^9
 package: Custom
+libraries: 
+  - reserve_movies/reserve_movies
+  
