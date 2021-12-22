@@ -1,10 +1,10 @@
 function ShowMoviesByGenre() {
     window.onload = function() {
-        var movieGenre = localStorage.getItem("movieGenre");  
+        const movieGenre = localStorage.getItem("movieGenre"); 
         $('#genre').val(movieGenre);
     }
     $("#genre").on("change", function () {
-        var genre = $(this).val();
+        const genre = $(this).val();
         localStorage.setItem("movieGenre", genre);
         $.ajax({
             method: "GET",
