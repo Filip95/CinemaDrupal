@@ -4,8 +4,8 @@
 </head>
 <body>
     <h1>{{'Welcome to movie reservation page'}}</h1>
-    <h3>{{'Please select movie genre for which you would like to make a reservation:'}}</h3>
-    <select name="genre" id="genre">
+    <h4>{{'Please select movie genre for which you would like to make a reservation:'}}</h4>
+    <select name="genre" id="genre" data-testid="genre-dropdown-toggle">
         <option value="">Select a genre</option>
         <option value="0">All Movies</option>
         {% for genre in genres %}
@@ -15,16 +15,19 @@
     <ol> 
     {% if movies is not empty %}
         {% for movie in movies %}
-        <div>
+        <div class = "movie-class">
             <li> 
+                <hr>
                 <h3>{{movie.title.value}}</h3>
                 <h6>{{movie.field_description.value}}</h6>
-                <img src="{{ file_url(movie.field_poster_image.entity.uri.value) }}" width="400px" height="400px"><br>
+                <img src="{{ file_url(movie.field_poster_image.entity.uri.value) }}" class="img"><br>
             </li>
+            <button class="reserve-movies-button" data-testid="reserve-movies-button"> Reserve movie </button>
+            <hr>
         </div>    
         {% endfor %}
     {% else %}
-            <h3>There are currently no movies in the selected genre, check back soon or select a different genre</h3>
+            <h4>There are currently no movies in the selected genre, check back soon or select a different genre</h4>
     {% endif %}
     </ol>
 </body>

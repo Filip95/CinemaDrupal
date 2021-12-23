@@ -3,6 +3,7 @@ function ShowMoviesByGenre() {
         const movieGenre = localStorage.getItem("movieGenre"); 
         $('#genre').val(movieGenre);
     }
+
     $("#genre").on("change", function () {
         const genre = $(this).val();
         localStorage.setItem("movieGenre", genre);
@@ -13,6 +14,11 @@ function ShowMoviesByGenre() {
                 window.location.href = "./movie-reservation?genre=" + $("#genre").val();
             }
         });
+    });
+
+    $(".movie-class").on("click", function(){
+        $(this).toggleClass("movie-class-clicked");
+        $(this).find(".reserve-movies-button").first().toggleClass("show-button");
     });
  }
  ShowMoviesByGenre();
