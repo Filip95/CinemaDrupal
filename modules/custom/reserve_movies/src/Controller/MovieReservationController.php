@@ -17,7 +17,7 @@ class MovieReservationController {
        $query = \Drupal::entityQuery('node')
           ->condition('type', 'movie')
           ->sort('created','DESC');
-          if( isset($genre_id)){
+          if(!empty($genre_id)){
             $query->condition('field_genre', $genre_id);
           }
 

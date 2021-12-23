@@ -1,0 +1,53 @@
+h1 {
+    color: black
+}
+
+h3{
+    color: burlywood
+}
+
+h4{
+    color:crimson
+}
+
+h6{
+    color: blueviolet 
+}
+
+.reserve-movies-button {
+    padding: 5px 10px;
+    background-color: #151515;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 2px;
+    transition: 225ms;
+    cursor: pointer;
+    transform: scale(0);
+}
+
+.img{
+    width: 400px;
+    height: 400px
+}
+
+.movie-class {
+    cursor:pointer;
+}
+.movie-class-clicked{
+    background-color: cadetblue;
+    border-radius: 1rem;
+    transition: background-color;
+    transform: scale(1.15);
+}
+
+.show-button{
+    background-color: blanchedalmond;
+    color:coral;
+    padding:1rem;
+    border: darkblue;
+    border-radius: 2rem;
+    transform: scale(1.05);
+    transition-duration: 500ms;
+}
