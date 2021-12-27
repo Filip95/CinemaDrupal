@@ -17,8 +17,17 @@ function ShowMoviesByGenre() {
     });
 
     $(".movie-class").on("click", function(){
+        const popUpID = "#popup-" + $(this).attr("id");
+        const reservationButtonID = "#reservation-button-" + $(this).attr("id");
+        const confirmReservationButton = "#confirm-reservation-button-" + $(this).attr("id");
         $(this).toggleClass("movie-class-clicked");
-        $(this).find(".reserve-movies-button").first().toggleClass("show-button");
+        $(reservationButtonID).addClass("show-button");
+        $(reservationButtonID).on("click",function(){
+            $(popUpID).addClass("show-popup");
+            $(popUpID).on("change", function(){
+                $(confirmReservationButton).show();
+            })
+        });
     });
  }
  ShowMoviesByGenre();

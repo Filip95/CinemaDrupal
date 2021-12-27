@@ -16,8 +16,8 @@ h6{
 
 .reserve-movies-button {
     padding: 5px 10px;
-    background-color: #151515;
-    color: white;
+    background-color: blanchedalmond;
+    color: coral;
     font-weight: 700;
     letter-spacing: 1px;
     border: none;
@@ -39,15 +39,39 @@ h6{
     background-color: cadetblue;
     border-radius: 1rem;
     transition: background-color;
-    transform: scale(1.15);
+    transform: scale(1.05);
+}
+
+.pop-up{
+    transform:scale(0);
+    position: relative;
+    width: 250px;
+    height: auto;
+    border-radius: 3px;
+    background-color: aquamarine;
+    padding: 10px;
+    box-shadow: 0 0 6px 2px black;
+    text-align: center;
+    transition: 225ms;
 }
 
 .show-button{
-    background-color: blanchedalmond;
-    color:coral;
-    padding:1rem;
-    border: darkblue;
-    border-radius: 2rem;
-    transform: scale(1.05);
+    transform: scale(1.05) !important;
     transition-duration: 500ms;
+}
+
+.show-popup{
+    transform: scale(1) !important;
+    transition-duration: 300ms;
+}
+
+.confirm-reservation-button{
+    background-color: black;
+    color:white;
+    padding: 1rem;
+    border:yellowgreen;
+    border-radius: 2px;
+    transition: 150ms;
+    cursor: pointer;
+    display: none;
 }
