@@ -20,14 +20,20 @@ function ShowMoviesByGenre() {
         const popUpID = "#popup-" + $(this).attr("id");
         const reservationButtonID = "#reservation-button-" + $(this).attr("id");
         const confirmReservationButton = "#confirm-reservation-button-" + $(this).attr("id");
+        const cancelPopupSelection = "#cancel-" + $(this).attr("id");
         $(this).toggleClass("movie-class-clicked");
         $(reservationButtonID).addClass("show-button");
         $(reservationButtonID).on("click",function(){
             $(popUpID).addClass("show-popup");
-            $(popUpID).on("change", function(){
-                $(confirmReservationButton).show();
-            })
         });
-    });
- }
+        $(popUpID).on("change", function(){
+            $(cancelPopupSelection).show();
+            $(confirmReservationButton).addClass("show-confirmation");
+        });
+        $(cancelPopupSelection).on("click",function(){
+            $(confirmReservationButton).removeClass("show-confirmation");
+            $(popUpID).removeClass("show-popup");
+        });
+    });        
+}
  ShowMoviesByGenre();

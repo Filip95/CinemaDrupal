@@ -73,5 +73,14 @@ h6{
     border-radius: 2px;
     transition: 150ms;
     cursor: pointer;
+    transform: scale(0);
+}
+
+.show-confirmation{
+    transform: scale(1) !important;
+    transition-duration: 300ms;
+}
+
+.cancel-button{
     display: none;
 }

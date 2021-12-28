@@ -32,6 +32,7 @@
                   {% for day in movie.field_available_days %}
                     <input type="radio" value="{{ day.value }}" name="choice" data-testid="chosen-day"><span>{{ day.value }}</span>
                   {% endfor %}
+                  <input type="button" name="cancel" value="x" class = "cancel-button" id = "cancel-{{movie.id}}">
                 </form>
             </div>
             <div>
