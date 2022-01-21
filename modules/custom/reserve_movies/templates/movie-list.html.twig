@@ -15,31 +15,27 @@
     <ol> 
     {% if movies is not empty %}
         {% for movie in movies %}
-        <div class = "movie-class" id="{{movie.nid.value}}">
+        <div class = "movie-class" id="movie-{{movie.nid.value}}">
             <div>
-            <li> 
-                <hr>
-                <h3>{{movie.title.value}}</h3>
-                <h6>{{movie.field_description.value}}</h6>
-                <img src="{{ file_url(movie.field_poster_image.entity.uri.value) }}" class="img"><br>
-            </li>
+                <li> 
+                    <h3>{{movie.title.value}}</h3>
+                    <h6>{{movie.field_description.value}}</h6>
+                    <img src="{{ file_url(movie.field_poster_image.entity.uri.value) }}" class="img"><br>
+                    <hr>
+                </li>
             </div>
-            <div>
-            <button class="reserve-movies-button" id="reservation-button-{{movie.id}}" data-testid="reserve-movies-button"> Reserve movie </button>
-            </div>
-            <div class="pop-up" id="popup-{{movie.id}}" data-testid="reservation-popup">
+            <button class="reserve-movies-button" id="reservation-button-{{movie.nid.value}}" data-testid="reserve-movies-button"> Reserve movie </button>
+            <div class="pop-up" id="popup-{{movie.nid.value}}" data-testid="reservation-popup">
                 <form>
                   {% for day in movie.field_available_days %}
                     <input type="radio" value="{{ day.value }}" name="choice" data-testid="chosen-day"><span>{{ day.value }}</span>
                   {% endfor %}
-                  <input type="button" name="cancel" value="x" class = "cancel-button" id = "cancel-{{movie.id}}">
+                    <input type="button" name="cancel" value="x" class = "cancel-button" id = "cancel-{{movie.nid.value}}">
                 </form>
             </div>
-            <div>
-                <button type="submit" class="confirm-reservation-button" id="confirm-reservation-button-{{movie.id}}" data-testid="reservation-confirm">
-                    Confirm reservation for the selected day ?
-                </button>
-            </div>
+            <button type="submit" class="confirm-reservation-button" id="confirm-reservation-button-{{movie.nid.value}}" data-testid="reservation-confirm">
+                Confirm reservation for the selected day ?
+            </button>
         </div>    
         {% endfor %}
     {% else %}
