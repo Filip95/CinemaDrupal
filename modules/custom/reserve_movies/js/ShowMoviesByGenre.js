@@ -1,4 +1,4 @@
-$(function ShowMoviesByGenre() {
+$(function showMoviesByGenre() {
     window.onload = function() {
         const movieGenre = localStorage.getItem("movieGenre"); 
         $('#genre').val(movieGenre);
@@ -56,4 +56,3 @@ $(document).ready(function(){
             });
         });        
 });
-    
